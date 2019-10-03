@@ -40,3 +40,9 @@
     margin-right: 0;
   }
 }
+
+@mixin mQ($width) {
+  @media screen and (max-width: $width ){
+    @content;
+  }
+}
