@@ -5,6 +5,34 @@ $offWhite: #f8f9fb;
 
 //font sizes
 $sectionHeding: 24px;
+$bannerHeading: 46px;
+
+//mixins
+
+@mixin banner {
+  width: 100%;
+  position: relative;
+  color: white;
+  .banner-content {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+  }
+  img {
+    width: 100%;
+  }
+  span {
+    font-size: $bannerHeading;
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  span.title {
+    font-weight: normal;
+    margin-bottom: 30px;
+  }
+
+}
 
 #main-nav {
     background: $deepBlue;
@@ -34,4 +62,19 @@ $sectionHeding: 24px;
 section h1 {
   font-size: $sectionHeding;
   color: $deepBlue;
+}
+
+.lead-banner {
+  @include banner;
+  text-align: right;
+}
+
+.lessons-banner {
+  @include banner;
+  li {
+    text-transform: uppercase;
+    font-size: 20px;
+    max-width: 500px;
+    margin: 60px 0;
+  }
 }
